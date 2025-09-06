@@ -1,0 +1,237 @@
+$flaticon_mycollection-font: "flaticon_mycollection";
+
+@font-face {
+    font-family: $flaticon_mycollection-font;
+    src: url("./flaticon_mycollection.woff2?8ff590f03691f1dcb26239da3d94bd41") format("woff2"),
+url("./flaticon_mycollection.woff?8ff590f03691f1dcb26239da3d94bd41") format("woff"),
+url("./flaticon_mycollection.eot?8ff590f03691f1dcb26239da3d94bd41#iefix") format("embedded-opentype"),
+url("./flaticon_mycollection.ttf?8ff590f03691f1dcb26239da3d94bd41") format("truetype"),
+url("./flaticon_mycollection.svg?8ff590f03691f1dcb26239da3d94bd41#flaticon_mycollection") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon_mycollection !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+$flaticon_mycollection-map: (
+    "margin": "\f101",
+    "notepad": "\f102",
+    "web-development": "\f103",
+    "web-development-1": "\f104",
+    "star": "\f105",
+    "view": "\f106",
+    "chart": "\f107",
+    "diagram": "\f108",
+    "chart-1": "\f109",
+    "line-chart": "\f10a",
+    "notes": "\f10b",
+    "note": "\f10c",
+    "user": "\f10d",
+    "user-1": "\f10e",
+    "loupe": "\f10f",
+    "magnifying-glass": "\f110",
+    "verified": "\f111",
+    "protection": "\f112",
+    "bell": "\f113",
+    "setting": "\f114",
+    "snow": "\f115",
+    "right": "\f116",
+    "plus": "\f117",
+    "filter": "\f118",
+    "filter-1": "\f119",
+    "clock": "\f11a",
+    "time": "\f11b",
+    "pie-chart": "\f11c",
+    "check-mark": "\f11d",
+    "check": "\f11e",
+    "flag": "\f11f",
+    "flag-1": "\f120",
+    "flag-2": "\f121",
+    "hardware": "\f122",
+    "brightness-and-contrast": "\f123",
+    "light-mode": "\f124",
+    "sun": "\f125",
+    "contrast": "\f126",
+    "clipboard": "\f127",
+    "check-1": "\f128",
+    "work-in-progress": "\f129",
+    "check-2": "\f12a",
+    "archive": "\f12b",
+    "archive-1": "\f12c",
+    "dashboard": "\f12d",
+    "dashboard-1": "\f12e",
+    "dashboard-interface": "\f12f",
+    "margin-1": "\f130",
+    "money": "\f131",
+    "down": "\f132",
+    "log-out": "\f133",
+    "user-2": "\f134",
+    "notification": "\f135",
+);
+
+.flaticon-margin:before {
+    content: map-get($flaticon_mycollection-map, "margin");
+}
+.flaticon-notepad:before {
+    content: map-get($flaticon_mycollection-map, "notepad");
+}
+.flaticon-web-development:before {
+    content: map-get($flaticon_mycollection-map, "web-development");
+}
+.flaticon-web-development-1:before {
+    content: map-get($flaticon_mycollection-map, "web-development-1");
+}
+.flaticon-star:before {
+    content: map-get($flaticon_mycollection-map, "star");
+}
+.flaticon-view:before {
+    content: map-get($flaticon_mycollection-map, "view");
+}
+.flaticon-chart:before {
+    content: map-get($flaticon_mycollection-map, "chart");
+}
+.flaticon-diagram:before {
+    content: map-get($flaticon_mycollection-map, "diagram");
+}
+.flaticon-chart-1:before {
+    content: map-get($flaticon_mycollection-map, "chart-1");
+}
+.flaticon-line-chart:before {
+    content: map-get($flaticon_mycollection-map, "line-chart");
+}
+.flaticon-notes:before {
+    content: map-get($flaticon_mycollection-map, "notes");
+}
+.flaticon-note:before {
+    content: map-get($flaticon_mycollection-map, "note");
+}
+.flaticon-user:before {
+    content: map-get($flaticon_mycollection-map, "user");
+}
+.flaticon-user-1:before {
+    content: map-get($flaticon_mycollection-map, "user-1");
+}
+.flaticon-loupe:before {
+    content: map-get($flaticon_mycollection-map, "loupe");
+}
+.flaticon-magnifying-glass:before {
+    content: map-get($flaticon_mycollection-map, "magnifying-glass");
+}
+.flaticon-verified:before {
+    content: map-get($flaticon_mycollection-map, "verified");
+}
+.flaticon-protection:before {
+    content: map-get($flaticon_mycollection-map, "protection");
+}
+.flaticon-bell:before {
+    content: map-get($flaticon_mycollection-map, "bell");
+}
+.flaticon-setting:before {
+    content: map-get($flaticon_mycollection-map, "setting");
+}
+.flaticon-snow:before {
+    content: map-get($flaticon_mycollection-map, "snow");
+}
+.flaticon-right:before {
+    content: map-get($flaticon_mycollection-map, "right");
+}
+.flaticon-plus:before {
+    content: map-get($flaticon_mycollection-map, "plus");
+}
+.flaticon-filter:before {
+    content: map-get($flaticon_mycollection-map, "filter");
+}
+.flaticon-filter-1:before {
+    content: map-get($flaticon_mycollection-map, "filter-1");
+}
+.flaticon-clock:before {
+    content: map-get($flaticon_mycollection-map, "clock");
+}
+.flaticon-time:before {
+    content: map-get($flaticon_mycollection-map, "time");
+}
+.flaticon-pie-chart:before {
+    content: map-get($flaticon_mycollection-map, "pie-chart");
+}
+.flaticon-check-mark:before {
+    content: map-get($flaticon_mycollection-map, "check-mark");
+}
+.flaticon-check:before {
+    content: map-get($flaticon_mycollection-map, "check");
+}
+.flaticon-flag:before {
+    content: map-get($flaticon_mycollection-map, "flag");
+}
+.flaticon-flag-1:before {
+    content: map-get($flaticon_mycollection-map, "flag-1");
+}
+.flaticon-flag-2:before {
+    content: map-get($flaticon_mycollection-map, "flag-2");
+}
+.flaticon-hardware:before {
+    content: map-get($flaticon_mycollection-map, "hardware");
+}
+.flaticon-brightness-and-contrast:before {
+    content: map-get($flaticon_mycollection-map, "brightness-and-contrast");
+}
+.flaticon-light-mode:before {
+    content: map-get($flaticon_mycollection-map, "light-mode");
+}
+.flaticon-sun:before {
+    content: map-get($flaticon_mycollection-map, "sun");
+}
+.flaticon-contrast:before {
+    content: map-get($flaticon_mycollection-map, "contrast");
+}
+.flaticon-clipboard:before {
+    content: map-get($flaticon_mycollection-map, "clipboard");
+}
+.flaticon-check-1:before {
+    content: map-get($flaticon_mycollection-map, "check-1");
+}
+.flaticon-work-in-progress:before {
+    content: map-get($flaticon_mycollection-map, "work-in-progress");
+}
+.flaticon-check-2:before {
+    content: map-get($flaticon_mycollection-map, "check-2");
+}
+.flaticon-archive:before {
+    content: map-get($flaticon_mycollection-map, "archive");
+}
+.flaticon-archive-1:before {
+    content: map-get($flaticon_mycollection-map, "archive-1");
+}
+.flaticon-dashboard:before {
+    content: map-get($flaticon_mycollection-map, "dashboard");
+}
+.flaticon-dashboard-1:before {
+    content: map-get($flaticon_mycollection-map, "dashboard-1");
+}
+.flaticon-dashboard-interface:before {
+    content: map-get($flaticon_mycollection-map, "dashboard-interface");
+}
+.flaticon-margin-1:before {
+    content: map-get($flaticon_mycollection-map, "margin-1");
+}
+.flaticon-money:before {
+    content: map-get($flaticon_mycollection-map, "money");
+}
+.flaticon-down:before {
+    content: map-get($flaticon_mycollection-map, "down");
+}
+.flaticon-log-out:before {
+    content: map-get($flaticon_mycollection-map, "log-out");
+}
+.flaticon-user-2:before {
+    content: map-get($flaticon_mycollection-map, "user-2");
+}
+.flaticon-notification:before {
+    content: map-get($flaticon_mycollection-map, "notification");
+}

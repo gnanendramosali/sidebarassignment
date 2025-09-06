@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sidebar Assignment</title>
+    <link rel="stylesheet" href="./assets/font/flaticon_mycollection.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Overlay for mobile -->
+    <div class="overlay" id="overlay"></div>
+
+    <div class="container_section">
+
+        <!-- Sidebar -->
+        <div class="sidebar_container">
+            <div class="icon_bar">
+                <div class="top_menubar">
+                    <div class="logo">
+                        <img src="./assets/png/logo.png" alt="Logo" id="logoImg">
+                    </div>
+                    <ul class="menu">
+                        <li><i class="flaticon flaticon-dashboard-interface"></i></li>
+                        <li><i class="flaticon flaticon-check-1"></i></li>
+                    </ul>
+                </div>
+
+                <div class="bottom_menu">
+
+                    <ul class="menu">
+                        <li><i class="flaticon flaticon-setting"></i></li>
+                        <li><i class="flaticon flaticon-user-1"></i></li>
+
+                    </ul>
+                    <div class="theme-switch">
+                        <div id="themeIcon" class="theme-btn">
+                            <i class="flaticon flaticon-contrast"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sidebar" id="sidebar">
+                <div class="sidebar-header">
+                    <h2 class="heading"></h2>
+                    <a class="toggle-btn" id="toggleBtn"><i class="flaticon flaticon-right"></i></a>
+                </div>
+
+                <div class="side_search">
+                    <div class="search_bar">
+                        <div class="icon"><i class="flaticon flaticon-loupe"></i></div>
+                        <input type="search" name="Search" placeholder="Search..">
+                    </div>
+                </div>
+
+                <div class="sidebar_content">
+                    <ul class="menu"></ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <header>
+                <h1 id="mobileMenuBtn"></h1>
+            </header>
+            <p></p>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
