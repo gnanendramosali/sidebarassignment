@@ -131,10 +131,8 @@ i {
 }
 
 .sidebar {
-    top: 0;
-    left: 0;
     height: 100%;
-    width: 300px;
+    max-width: 250px;
     border-right: 1px solid #ddd;
     padding: 10px;
     display: flex;
@@ -280,8 +278,6 @@ input:checked+.slider:before {
     flex-direction: column
 }
 
-.sidebar.collapsed~.main-content {}
-
 header {
     display: flex;
     align-items: center;
@@ -371,8 +367,9 @@ body.dark .sidebar {
     cursor: pointer;
     transition: transform .3s ease;
     display: flex;
+    justify-content: center;
     align-items: center;
-    gap: 10px
+    gap: 10px;
 }
 
 .top_menubar {
@@ -421,14 +418,6 @@ body.dark .sidebar {
     white-space: nowrap;
 }
 
-.submenu {
-    overflow: hidden;
-    flex-direction: column;
-    list-style: none;
-    padding-left: 20px;
-    transition: max-height .3s ease;
-    width: 100%
-}
 
 .submenu-item {
     cursor: pointer;
@@ -464,21 +453,17 @@ body.dark .sidebar {
     max-height: 0;
     overflow: hidden;
     transition: max-height .3s ease, opacity .3s ease;
-    opacity: 0
+    opacity: 0;
+    flex-direction: column;
+    list-style: none;
+    width: 100%;
+    padding-left: 25px
 }
+
 
 .menu-wrapper.submenu-open+.submenu {
     max-height: 500px;
     opacity: 1
-}
-
-.sidebar {
-    width: 250px;
-    /* background: var(--sidebar-bg, #fff); */
-    /* color: var(--sidebar-text, #333); */
-    height: 100vh;
-    transition: width .3s ease, transform .3s ease;
-    overflow-y: auto
 }
 
 .sidebar.collapsed {
@@ -520,13 +505,7 @@ body.dark .sidebar {
     height: 20px
 }
 
-.submenu {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height .4s ease, opacity .3s ease;
-    opacity: 0;
-    padding-left: 25px
-}
+
 
 .menu-wrapper.submenu-open+.submenu {
     opacity: 1
@@ -545,13 +524,7 @@ body.dark .sidebar {
     color: var(--highlight-color, #007bff)
 }
 
-.theme-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /* margin: 10px; */
-    cursor: pointer
-}
+
 
 .theme-btn i {
     transition: transform .3s ease

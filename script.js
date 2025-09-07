@@ -13,10 +13,8 @@ const searchInput = document.querySelector(".sidebar .search_bar input");
 
 // ------------------- Sidebar Toggle ------------------- //
 toggleBtn.addEventListener("click", () => {
-    // if (window.innerWidth > 768) {
-        sidebar.classList.toggle("collapsed");
-        renderSidebar(currentMenuKey, searchInput.value);
-    // }
+    sidebar.classList.toggle("collapsed");
+    renderSidebar(currentMenuKey, searchInput?.value || "");
 });
 
 mobileMenuBtn.addEventListener("click", () => {
@@ -27,6 +25,8 @@ mobileMenuBtn.addEventListener("click", () => {
 overlay.addEventListener("click", () => {
     sidebar.classList.remove("mobile-visible");
     overlay.classList.remove("active");
+    if (searchInput) searchInput.value = "";
+    renderSidebar(currentMenuKey);
 });
 
 // ------------------- Theme Toggle ------------------- //
@@ -201,7 +201,6 @@ const sidebarMenus = {
 
             ]
         },
-        // { icon: "flaticon-archive", label: "Archived", content: "<p>The rest of the page can be empty.</p>" },
     ],
     settings: [
         {
@@ -308,7 +307,7 @@ function renderSidebar(menuKey, filter = "") {
         const menubarDiv = document.createElement("div");
         menubarDiv.classList.add("menubar");
 
-        let hasMatch = false; // ✅ Track if section has matching items
+        let hasMatch = false;
 
         if (section.heading && section.items) {
             const headingDiv = document.createElement("div");
@@ -320,10 +319,8 @@ function renderSidebar(menuKey, filter = "") {
             ul.classList.add("menu");
 
             section.items.forEach(item => {
-                // 🔍 Check match for label
                 const labelMatch = item.label.toLowerCase().includes(filter.toLowerCase());
 
-                // 🔍 If submenu, check its children
                 let submenuMatches = [];
                 if (item.submenu) {
                     submenuMatches = item.submenu.filter(sub =>
@@ -331,11 +328,8 @@ function renderSidebar(menuKey, filter = "") {
                     );
                 }
 
-                // ✅ Add only if match found
                 if (!filter || labelMatch || submenuMatches.length > 0) {
                     hasMatch = true;
-
-                    // Clone item but only with matching submenu children
                     const newItem = { ...item };
                     if (filter && submenuMatches.length > 0) {
                         newItem.submenu = submenuMatches;
@@ -349,7 +343,6 @@ function renderSidebar(menuKey, filter = "") {
                 menubarDiv.appendChild(ul);
             }
         } else {
-            // For items without heading (direct links)
             const labelMatch = section.label?.toLowerCase().includes(filter.toLowerCase());
             if (!filter || labelMatch) {
                 hasMatch = true;
@@ -360,7 +353,6 @@ function renderSidebar(menuKey, filter = "") {
             }
         }
 
-        // ✅ Append section only if it has a match
         if (hasMatch || !filter) {
             sidebarContent.appendChild(menubarDiv);
         }
@@ -369,7 +361,6 @@ function renderSidebar(menuKey, filter = "") {
     sidebarHeading.textContent = collapsed ? "" :
         menuKey.charAt(0).toUpperCase() + menuKey.slice(1);
 }
-
 
 // ------------------- Icon Bar Events ------------------- //
 const iconBarItems = document.querySelectorAll(".icon_bar .menu li");
@@ -381,20 +372,22 @@ iconBarItems.forEach((li, index) => {
             index === 1 ? "tasks" :
                 index === 2 ? "settings" : "user";
         renderSidebar(currentMenuKey);
-        searchInput.value = "";
+        if (searchInput) searchInput.value = "";
         mainContent.innerHTML = "";
     });
 });
 
 // ------------------- Search ------------------- //
-searchInput.addEventListener("input", () => {
-    renderSidebar(currentMenuKey, searchInput.value);
-});
+if (searchInput) {
+    searchInput.addEventListener("input", () => {
+        renderSidebar(currentMenuKey, searchInput.value);
+    });
+}
 
 // ------------------- Default Load ------------------- //
 window.addEventListener("load", () => {
     currentMenuKey = "dashboard";
-    searchInput.value = "";
+    if (searchInput) searchInput.value = "";
     iconBarItems.forEach(el => el.classList.remove("active"));
     iconBarItems[0].classList.add("active");
     renderSidebar(currentMenuKey);
