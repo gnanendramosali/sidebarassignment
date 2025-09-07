@@ -308,30 +308,68 @@ function renderSidebar(menuKey, filter = "") {
         const menubarDiv = document.createElement("div");
         menubarDiv.classList.add("menubar");
 
+        let hasMatch = false; // ✅ Track if section has matching items
+
         if (section.heading && section.items) {
             const headingDiv = document.createElement("div");
             headingDiv.classList.add("menu-heading");
             headingDiv.innerHTML = `<span>${section.heading}</span>`;
             if (collapsed) headingDiv.style.display = "none";
-            menubarDiv.appendChild(headingDiv);
 
             const ul = document.createElement("ul");
             ul.classList.add("menu");
-            section.items.forEach(item => ul.appendChild(createMenuItem(item, filter)));
-            menubarDiv.appendChild(ul);
+
+            section.items.forEach(item => {
+                // 🔍 Check match for label
+                const labelMatch = item.label.toLowerCase().includes(filter.toLowerCase());
+
+                // 🔍 If submenu, check its children
+                let submenuMatches = [];
+                if (item.submenu) {
+                    submenuMatches = item.submenu.filter(sub =>
+                        sub.label.toLowerCase().includes(filter.toLowerCase())
+                    );
+                }
+
+                // ✅ Add only if match found
+                if (!filter || labelMatch || submenuMatches.length > 0) {
+                    hasMatch = true;
+
+                    // Clone item but only with matching submenu children
+                    const newItem = { ...item };
+                    if (filter && submenuMatches.length > 0) {
+                        newItem.submenu = submenuMatches;
+                    }
+                    ul.appendChild(createMenuItem(newItem, filter));
+                }
+            });
+
+            if (hasMatch || !filter) {
+                menubarDiv.appendChild(headingDiv);
+                menubarDiv.appendChild(ul);
+            }
         } else {
-            const ul = document.createElement("ul");
-            ul.classList.add("menu");
-            ul.appendChild(createMenuItem(section, filter));
-            menubarDiv.appendChild(ul);
+            // For items without heading (direct links)
+            const labelMatch = section.label?.toLowerCase().includes(filter.toLowerCase());
+            if (!filter || labelMatch) {
+                hasMatch = true;
+                const ul = document.createElement("ul");
+                ul.classList.add("menu");
+                ul.appendChild(createMenuItem(section, filter));
+                menubarDiv.appendChild(ul);
+            }
         }
 
-        sidebarContent.appendChild(menubarDiv);
+        // ✅ Append section only if it has a match
+        if (hasMatch || !filter) {
+            sidebarContent.appendChild(menubarDiv);
+        }
     });
 
     sidebarHeading.textContent = collapsed ? "" :
         menuKey.charAt(0).toUpperCase() + menuKey.slice(1);
 }
+
 
 // ------------------- Icon Bar Events ------------------- //
 const iconBarItems = document.querySelectorAll(".icon_bar .menu li");
