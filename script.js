@@ -63,35 +63,35 @@ const sidebarMenus = {
         {
             heading: "Dashboard types",
             items: [
-                { icon: "flaticon-view", label: "Overview", content: "<p>Dashboard Overview</p>" },
+                { icon: "flaticon-view", label: "Overview",},
                 {
                     icon: "flaticon-web-development-1",
                     label: "Executive Summary",
                     submenu: [
-                        { label: "Revenue Overview", content: "<p>Summary 1 content</p>" },
-                        { label: "Key Performance Indications", content: "<p>Summary 2 content</p>" },
-                        { label: "Strategic Goals Progress", content: "<p>Summary 2 content</p>" },
-                        { label: "Department Highlights", content: "<p>Summary 2 content</p>" }
+                        { label: "Revenue Overview",},
+                        { label: "Key Performance Indications",},
+                        { label: "Strategic Goals Progress",},
+                        { label: "Department Highlights",}
                     ]
                 },
                 {
                     icon: "flaticon-chart",
                     label: "Operations Dashboard",
                     submenu: [
-                        { label: "Project Timeline", content: "<p>Summary 1 content</p>" },
-                        { label: "Resource Allocation", content: "<p>Summary 2 content</p>" },
-                        { label: "Team Performance", content: "<p>Summary 2 content</p>" },
-                        { label: "Capacity Planning", content: "<p>Summary 2 content</p>" },
+                        { label: "Project Timeline",},
+                        { label: "Resource Allocation",},
+                        { label: "Team Performance",},
+                        { label: "Capacity Planning",},
                     ]
                 },
                 {
                     icon: "flaticon-chart-1",
                     label: "Financial Dashboard",
                     submenu: [
-                        { label: "Budget vs Actual", content: "<p>Summary 1 content</p>" },
-                        { label: "Cash Flow Analysis", content: "<p>Summary 2 content</p>" },
-                        { label: "Expense Breakdown", content: "<p>Summary 2 content</p>" },
-                        { label: "Profit & Loss Summary", content: "<p>Summary 2 content</p>" },
+                        { label: "Budget vs Actual",},
+                        { label: "Cash Flow Analysis",},
+                        { label: "Expense Breakdown",},
+                        { label: "Profit & Loss Summary",},
                     ]
                 }
             ]
@@ -103,30 +103,30 @@ const sidebarMenus = {
                     icon: "flaticon-note",
                     label: "Weekly Reports",
                     submenu: [
-                        { label: "Team Productivity: 87% ↑", content: "<p>Summary 1 content</p>" },
-                        { label: "Project Completion: 12/15", content: "<p>Summary 2 content</p>" },
-                        { label: "Budget Utilization: 73%", content: "<p>Summary 2 content</p>" },
-                        { label: "Client Satisfaction: 4.6/5", content: "<p>Summary 2 content</p>" },
+                        { label: "Team Productivity: 87% ↑",},
+                        { label: "Project Completion: 12/15",},
+                        { label: "Budget Utilization: 73%",},
+                        { label: "Client Satisfaction: 4.6/5",},
                     ]
                 },
                 {
                     icon: "flaticon-star",
                     label: "Monthly Insights",
                     submenu: [
-                        { label: "Revenue Growth: +15.3%", content: "<p>Summary 1 content</p>" },
-                        { label: "New Clients: 4", content: "<p>Summary 2 content</p>" },
-                        { label: "Team Expansion: 8 hires", content: "<p>Summary 2 content</p>" },
-                        { label: "Cost Reduction: 7.2%", content: "<p>Summary 2 content</p>" },
+                        { label: "Revenue Growth: +15.3%",},
+                        { label: "New Clients: 4",},
+                        { label: "Team Expansion: 8 hires",},
+                        { label: "Cost Reduction: 7.2%",},
                     ]
                 },
                 {
                     icon: "flaticon-view",
                     label: "Quartely Analysis",
                     submenu: [
-                        { label: "Market Position: Improvements", content: "<p>Summary 1 content</p>" },
-                        { label: "ROI: 23.4%", content: "<p>Summary 2 content</p>" },
-                        { label: "Customer Retention: 92%", content: "<p>Summary 2 content</p>" },
-                        { label: "Innovation Index: 8.7/10", content: "<p>Summary 2 content</p>" },
+                        { label: "Market Position: Improvements",},
+                        { label: "ROI: 23.4%",},
+                        { label: "Customer Retention: 92%",},
+                        { label: "Innovation Index: 8.7/10",},
                     ]
                 }
             ]
@@ -138,49 +138,49 @@ const sidebarMenus = {
                     icon: "flaticon-chart",
                     label: "Performance Metrics",
                     submenu: [
-                        { label: "Sales Conversion: 34.2%", content: "<p>Summary 1 content</p>" },
-                        { label: "Lead Response Time: 2.3h", content: "<p>Summary 2 content</p>" },
-                        { label: "Customer Lifetime Value...", content: "<p>Summary 2 content</p>" },
-                        { label: "Churn Rate: 3,1%", content: "<p>Summary 2 content</p>" },
+                        { label: "Sales Conversion: 34.2%",},
+                        { label: "Lead Response Time: 2.3h",},
+                        { label: "Customer Lifetime Value...",},
+                        { label: "Churn Rate: 3,1%",},
                     ]
                 },
                 {
                     icon: "flaticon-chart-1",
                     label: "Predictive Analytics",
                     submenu: [
-                        { label: "Q4 Revenue Forecast: $2.5", content: "<p>Summary 1 content</p>" },
-                        { label: "Resource Demand: High", content: "<p>Summary 2 content</p>" },
-                        { label: "Market Trends: Positive", content: "<p>Summary 2 content</p>" },
-                        { label: "Risk Assessment: Low", content: "<p>Summary 2 content</p>" },
+                        { label: "Q4 Revenue Forecast: $2.5",},
+                        { label: "Resource Demand: High",},
+                        { label: "Market Trends: Positive",},
+                        { label: "Risk Assessment: Low",},
                     ]
                 }
             ]
         }
     ],
     tasks: [
-        { icon: "flaticon-plus", label: "New task", content: "<p>The rest of the page can be empty.</p>" },
-        { icon: "flaticon-filter", label: "Filter task", content: "<p>The rest of the page can be empty.</p>" },
+        { icon: "flaticon-plus", label: "New task", },
+        { icon: "flaticon-filter", label: "Filter task", },
         {
             heading: "Tasks",
             items: [
                 {
                     icon: "flaticon-clock", label: "Due today", submenu: [
-                        { label: "Review design mockups", content: "<p>Summary 1 content</p>" },
-                        { label: "Update documentation", content: "<p>Summary 2 content</p>" },
-                        { label: "Test new feature", content: "<p>Summary 2 content</p>" },
+                        { label: "Review design mockups",},
+                        { label: "Update documentation",},
+                        { label: "Test new feature",},
                     ]
                 },
                 {
                     icon: "flaticon-check-2", label: "In progress", submenu: [
-                        { label: "Implement user auth", content: "<p>Summary 1 content</p>" },
-                        { label: "Database migration", content: "<p>Summary 2 content</p>" }
+                        { label: "Implement user auth",},
+                        { label: "Database migration",}
                     ]
                 },
                 {
                     icon: "flaticon-check-mark", label: "Completed", submenu: [
-                        { label: "Fixed login bug", content: "<p>Summary 1 content</p>" },
-                        { label: "Updated dependencies", content: "<p>Summary 2 content</p>" },
-                        { label: "Code review completed", content: "<p>Summary 2 content</p>" },
+                        { label: "Fixed login bug",},
+                        { label: "Updated dependencies",},
+                        { label: "Code review completed",},
 
                     ]
                 },
@@ -191,12 +191,12 @@ const sidebarMenus = {
             items: [
                 {
                     icon: "flaticon-flag-1", label: "Priority tasks", submenu: [
-                        { label: "Summary 1", content: "<p>Summary 1 content</p>" },
-                        { label: "Summary 2", content: "<p>Summary 2 content</p>" }
+                        { label: "Summary 1",},
+                        { label: "Summary 2",}
                     ]
                 },
                 {
-                    icon: "flaticon-archive", label: "Archived", content: "<p>The rest of the page can be empty.</p>"
+                    icon: "flaticon-archive", label: "Archived",
                 },
 
             ]
@@ -206,10 +206,10 @@ const sidebarMenus = {
         {
             heading: "Settings",
             items: [
-                { icon: "flaticon-user-2", label: "Account Settings", content: "<p>Manage account details</p>" },
-                { icon: "flaticon-verified", label: "Verified", content: "<p>Update general settings</p>" },
-                { icon: "flaticon-notification", label: "Notifications", content: "<p>Update general settings</p>" },
-                { icon: "flaticon-setting", label: "General Settings", content: "<p>Update general settings</p>" },
+                { icon: "flaticon-user-2", label: "Account Settings",},
+                { icon: "flaticon-verified", label: "Verified",},
+                { icon: "flaticon-notification", label: "Notifications",},
+                { icon: "flaticon-setting", label: "General Settings",},
             ]
         }
     ],
@@ -217,8 +217,8 @@ const sidebarMenus = {
         {
             heading: "User",
             items: [
-                { icon: "flaticon-user-2", label: "Profile", content: "<p>User profile details</p>" },
-                { icon: "flaticon-log-out", label: "Logout", content: "<p>Logout from system</p>" }
+                { icon: "flaticon-user-2", label: "Profile",},
+                { icon: "flaticon-log-out", label: "Logout",}
             ]
         }
     ]
